@@ -1,3 +1,4 @@
+import 'package:flower_shop/constant.dart';
 import 'package:flutter/material.dart';
 
 class CustomButton extends StatelessWidget {
@@ -13,7 +14,7 @@ class CustomButton extends StatelessWidget {
       child: Container(
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(5),
-          color: const Color.fromARGB(255, 59, 148, 62),
+          color: btnGreenColor,
         ),
         padding: const EdgeInsets.symmetric(vertical: 6, horizontal: 8),
         child: Text(

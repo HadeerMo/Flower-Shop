@@ -1,3 +1,4 @@
+import 'package:flower_shop/constant.dart';
 import 'package:flutter/material.dart';
 
 class CustomAppbar extends StatelessWidget {
@@ -10,7 +11,7 @@ class CustomAppbar extends StatelessWidget {
     return Container(
       padding: const EdgeInsets.symmetric(vertical: 13),
       width: double.infinity,
-      color: const Color(0xff478360),
+      color: appbarColor,
       child: Padding(
         padding: const EdgeInsets.only(left: 13),
         child: Text(

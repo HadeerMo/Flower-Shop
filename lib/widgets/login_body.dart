@@ -1,3 +1,4 @@
+import 'package:flower_shop/pages/home_page.dart';
 import 'package:flower_shop/pages/register_page.dart';
 import 'package:flower_shop/widgets/customAppbar.dart';
 import 'package:flower_shop/widgets/custom_button.dart';
@@ -42,7 +43,9 @@ class LoginBody extends StatelessWidget {
                     ),
                     CustomButton(
                       text: 'Sign in',
-                      onTap: () {},
+                      onTap: () {
+                        Navigator.pushNamed(context, HomePage.id);
+                      },
                     ),
                     const SizedBox(
                       height: 15,

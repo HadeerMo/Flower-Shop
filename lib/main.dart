@@ -1,4 +1,4 @@
-import 'package:flower_shop/pages/login_page.dart';
+import 'package:flower_shop/pages/home_page.dart';
 import 'package:flower_shop/pages/register_page.dart';
 import 'package:flutter/material.dart';
 
@@ -15,8 +15,9 @@ class FlowerShop extends StatelessWidget {
     return  MaterialApp(
       debugShowCheckedModeBanner: false,
       routes: {
-        '/' : (context) => const LoginPage(),
+        '/' : (context) => const HomePage(),
         RegisterPage.id : (context) => const RegisterPage(),
+        HomePage.id : (context) => const HomePage(),
       },
     );
   }
