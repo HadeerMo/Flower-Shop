@@ -10,7 +10,7 @@ class DrawerProfileHeader extends StatelessWidget {
     return const UserAccountsDrawerHeader(
       decoration: BoxDecoration(
           image: DecorationImage(
-        image: AssetImage('assets/images/flowersBgDrawer.jpg'),
+        image: AssetImage('assets/images/skinCareBg.webp'),
         fit: BoxFit.cover,
       )),
       accountName: Text(

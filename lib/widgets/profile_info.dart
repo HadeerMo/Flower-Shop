@@ -1,3 +1,4 @@
+import 'package:flower_shop/pages/home_page.dart';
 import 'package:flower_shop/widgets/drawer_header.dart';
 import 'package:flutter/material.dart';
 
@@ -14,7 +15,9 @@ class ProfileInfo extends StatelessWidget {
         ListTile(
           title: const Text('Home'),
           leading: const Icon(Icons.home),
-          onTap: () {},
+          onTap: () {
+            Navigator.pushReplacementNamed(context, HomePage.id);
+          },
         ),
         ListTile(
           title: const Text('My Product'),

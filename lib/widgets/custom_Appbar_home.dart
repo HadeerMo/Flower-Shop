@@ -9,7 +9,7 @@ class CustomAppbarPages extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: const EdgeInsets.symmetric(vertical: 4),
+        padding: const EdgeInsets.symmetric(vertical: 4),
         color: appbarColor,
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,

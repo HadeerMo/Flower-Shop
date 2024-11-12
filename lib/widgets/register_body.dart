@@ -34,7 +34,6 @@ class RegisterBody extends StatelessWidget {
                       icon: Icons.email,
                       keyboardType: TextInputType.emailAddress,
                     ),
-                    
                     const SizedBox(
                       height: 27,
                     ),
@@ -47,7 +46,6 @@ class RegisterBody extends StatelessWidget {
                     const SizedBox(
                       height: 27,
                     ),
-
                     CustomButton(
                       text: 'Register',
                       onTap: () {},

@@ -2,7 +2,9 @@ import 'package:flutter/material.dart';
 
 class CustomLinkText extends StatelessWidget {
   const CustomLinkText({
-    super.key, required this.text, this.onTap,
+    super.key,
+    required this.text,
+    this.onTap,
   });
   final String text;
   final void Function()? onTap;

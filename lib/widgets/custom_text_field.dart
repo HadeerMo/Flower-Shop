@@ -5,7 +5,8 @@ class CustomerInputField extends StatelessWidget {
     super.key,
     required this.hint,
     required this.icon,
-    this.secure = false, this.keyboardType,
+    this.secure = false,
+    this.keyboardType,
   });
   final String hint;
   final IconData icon;

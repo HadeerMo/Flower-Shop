@@ -11,7 +11,10 @@ class DrawerProfileFooter extends StatelessWidget {
       children: [
         Padding(
           padding: EdgeInsets.all(8.0),
-          child: Text('Developed by Hader Mohamed © 2024',style: TextStyle(fontSize: 15),),
+          child: Text(
+            'Developed by Hader Mohamed © 2024',
+            style: TextStyle(fontSize: 15),
+          ),
         )
       ],
     );
