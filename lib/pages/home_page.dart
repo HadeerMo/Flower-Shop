@@ -1,3 +1,4 @@
+import 'package:flower_shop/Providers/cart_provider.dart';
 import 'package:flower_shop/constant.dart';
 import 'package:flower_shop/cubites/cubit/home_cubit.dart';
 import 'package:flower_shop/widgets/drawer_profile_footer.dart';
@@ -6,6 +7,7 @@ import 'package:flower_shop/widgets/profile_info.dart';
 import 'package:flower_shop/widgets/shopping_cart_icon.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:provider/provider.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -36,13 +38,21 @@ class HomePage extends StatelessWidget {
               fontWeight: FontWeight.w600,
             ),
           ),
-          actions: const [
-            ShoppingCartIcon(),
-            Text(
-              '\$ 128',
-              style: TextStyle(fontSize: 16),
+          actions: [
+            const ShoppingCartIcon(),
+            Consumer<CartProvider>(
+              builder: (context, value, child) {
+                return Text(
+                  '\$ ${value.totalPrice}',
+                  style: const TextStyle(fontSize: 16),
+                );
+              },
+              // child: Text(
+              //   '\$ 0',
+              //   style: TextStyle(fontSize: 16),
+              // ),
             ),
-            SizedBox(
+            const SizedBox(
               width: 13,
             ),
           ],

@@ -1,7 +1,9 @@
+import 'package:flower_shop/Providers/cart_provider.dart';
 import 'package:flower_shop/models/product_model/product_model.dart';
 import 'package:flower_shop/pages/details_page.dart';
 import 'package:flower_shop/widgets/price_text.dart';
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 
 class ProductItem extends StatelessWidget {
   const ProductItem({
@@ -19,12 +21,18 @@ class ProductItem extends StatelessWidget {
         footer: GridTileBar(
           title: const Text(''),
           leading: PriceText(price: productModel.price!),
-          trailing: IconButton(
-              onPressed: () {},
-              icon: const Icon(
-                Icons.add,
-                color: Colors.black,
-              )),
+          trailing: Consumer<CartProvider>(
+            builder: (context, value, child) {
+              return IconButton(
+                  onPressed: () {
+                    value.addProductToMyList(productModel);
+                  },
+                  icon: const Icon(
+                    Icons.add,
+                    color: Colors.black,
+                  ));
+            },
+          ),
         ),
         child: Stack(
           children: [
@@ -45,5 +53,3 @@ class ProductItem extends StatelessWidget {
     );
   }
 }
-
-

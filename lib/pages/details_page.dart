@@ -1,8 +1,10 @@
+import 'package:flower_shop/Providers/cart_provider.dart';
 import 'package:flower_shop/constant.dart';
 import 'package:flower_shop/models/product_model/product_model.dart';
 import 'package:flower_shop/widgets/details_body.dart';
 import 'package:flower_shop/widgets/shopping_cart_icon.dart';
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 
 class DetailsPage extends StatelessWidget {
   const DetailsPage({super.key});
@@ -23,18 +25,24 @@ class DetailsPage extends StatelessWidget {
               fontWeight: FontWeight.w600,
             ),
           ),
-          actions: const [
-            ShoppingCartIcon(),
-            Text(
-              '\$ 128',
-              style: TextStyle(fontSize: 16),
+          actions: [
+            const ShoppingCartIcon(),
+            Consumer<CartProvider>(
+              builder: (context, value, child) {
+                return Text(
+                  '\$ ${value.totalPrice}',
+                  style: const TextStyle(fontSize: 16),
+                );
+              },
             ),
-            SizedBox(
+            const SizedBox(
               width: 13,
             ),
           ],
         ),
-        body: DetailsBody(productDetails: productdetails,),
+        body: DetailsBody(
+          productDetails: productdetails,
+        ),
       ),
     );
   }
