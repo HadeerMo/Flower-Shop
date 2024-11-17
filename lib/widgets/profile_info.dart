@@ -1,3 +1,4 @@
+import 'package:flower_shop/pages/checkout_page.dart';
 import 'package:flower_shop/pages/home_page.dart';
 import 'package:flower_shop/widgets/drawer_header.dart';
 import 'package:flutter/material.dart';
@@ -22,7 +23,9 @@ class ProfileInfo extends StatelessWidget {
         ListTile(
           title: const Text('My Product'),
           leading: const Icon(Icons.shopping_cart),
-          onTap: () {},
+          onTap: () {
+            Navigator.pushNamed(context, CheckoutPage.id);
+          },
         ),
         ListTile(
           title: const Text('About'),

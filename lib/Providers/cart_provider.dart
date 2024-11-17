@@ -10,4 +10,11 @@ class CartProvider with ChangeNotifier {
     totalPrice = double.parse(totalPrice.toStringAsFixed(2));
     notifyListeners();
   }
+
+  deleteProductFromMyList(ProductModel product) {
+    myProducts.remove(product);
+    totalPrice -= product.price!;
+    totalPrice = double.parse(totalPrice.toStringAsFixed(2));
+    notifyListeners();
+  }
 }

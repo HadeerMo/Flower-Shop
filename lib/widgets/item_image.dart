@@ -14,7 +14,7 @@ class ItemImage extends StatelessWidget {
       height: MediaQuery.of(context).size.width * .09,
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(50),
-        image: DecorationImage(image: AssetImage(image), fit: BoxFit.cover),
+        image: DecorationImage(image: NetworkImage(image), fit: BoxFit.cover),
       ),
     );
   }
